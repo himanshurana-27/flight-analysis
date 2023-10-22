@@ -78,7 +78,19 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.6); /* Transparent sheet */
         }
-
+        #submit-review {
+            display: block;
+            width: 100%; /* The button will take the full width of its container */
+            margin-top: 10px; /* Add some spacing for better readability */
+        }
+    
+        /* Media query for small screens */
+        @media (max-width: 768px) {
+            #submit-review {
+                width: auto; /* Reset the width to its default size on small screens */
+                display: inline-block; /* Allow it to occupy only the necessary width */
+            }
+        }
         #section2 .section2-left h2 {
             font-size: 48px; /* Increased font size to 48px */
             font-weight: bold;
@@ -781,11 +793,18 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
-                <option value="7">7</option>
+                <option value="7">7</option>    
                 <option value="8">8</option>
                 <option value="9">9</option>
                 <option value="10">10</option>
             </select>
+            <!-- Review Text -->
+        <!-- Review Text -->
+        <label for="review-text">Review:</label>
+        <textarea id="review-text" name="review-text" rows="5" required></textarea>
+
+        <!-- Submit Review Button -->
+        <button id="submit-review" onclick="submitReview()">Submit Review</button>
         </div>
     </div>
 
